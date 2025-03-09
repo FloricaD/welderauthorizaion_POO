@@ -11,14 +11,13 @@ if __name__ == '__main__':
         if date_difference(today_date=today_date, expiration_date=welder.authorization_expiration_date):
             if welder.company_name in expired_authorizations:
                 # if there's a company_name key, add the welder
-                expired_authorizations[welder.company_name].append((welder.full_name, welder.authorization_expiration_date))
+                expired_authorizations[welder.company_name].append(welder)
             else:
                 # if there is no company_name as key, add it
-                expired_authorizations[welder.company_name] = [(welder.full_name, welder.authorization_expiration_date)]
+                expired_authorizations[welder.company_name] = [welder]
     print()
     for company, welders in expired_authorizations.items():
         print(f"For company {company} there are {len(welders)} expired authorizations")
-        for full_name, expiration_date in welders:
-            day, month, year = expiration_date
-            print(f"      {full_name}'s authorization expires on {day}/{month}/{year}")
+        for welder in welders:
+            welder.print_()
         print()

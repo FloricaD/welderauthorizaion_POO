@@ -7,6 +7,9 @@ class Welder:
         self.authorization_expiration_date = authorization_date
         self.company_name = company
 
+    def print_(self):
+        day, month, year = self.authorization_expiration_date
+        print(f"{self.full_name}'s authorization expires on {day}/{month}/{year}")
 
 def read_welders():
     """

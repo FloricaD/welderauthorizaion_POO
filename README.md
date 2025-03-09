@@ -47,6 +47,7 @@ Din lectia 12 s-au folosit:
 
 ### Tema 12
 
-- In folderul input_welder.py s-a definit clasa Welder, aceasta este folosita in :
+- In folderul input_welder.py s-a definit clasa Welder, pentru a gestiona si accesa mai usor informatiile fiecarui sudor
+- Aceasta este folosita in:
   - functia read_welders_from_file
   - modulul main.py
